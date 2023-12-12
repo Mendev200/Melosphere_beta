@@ -5,35 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Connectez-vous pour pouvoir écouter un large choix de musique.">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/form.min.css">
     <title>Page de connexion - Melosphere</title>
 </head>
 
 <body class="bg-connection">
     <main class="text-center">
-        <h1>SE CONNECTER</h1>
-        <form action="">
-            <div class="">
-                <label class="" for="email">Email</label>
+        <h1 class="title-conn">SE CONNECTER</h1>
+        <form method="post">
+            <div class="container-input">
+                <label class="title-input" for="email">Email</label>
                 <br>
                 <input type="email" autocomplete="off" class="input" id="email" name="email"
                     placeholder="Entrez votre adresse email..." required />
-            </div>
-            <div class="">
-                <label class="" for="password">Mot de passe</label>
+                <label class="title-input" for="password">Mot de passe</label>
                 <br>
-                <input type="password" autocomplete="off" class="input" id="password" name="password"
-                    placeholder="Entrez votre mot de passe ..." required />
+                <div class="container-eyeslash">
+                    <input type="password" autocomplete="off" class="input" id="password" name="password"
+                        placeholder="Entrez votre mot de passe ..." required />
+                    <img class="eyeslash" src="assets/img/eyeslash.svg" alt="cliquez pour voir votre mot de passe">
+                </div>
                 <a href="">
-                    <p class="fz-quatorze ">Mot de passe oublié ?</p>
+                    <p class="password-forget">Mot de passe oublié ?</p>
                 </a>
             </div>
-            <button type="submit" class="">
-                <p>Connexion</p>
+            <button type="submit" class="btn-conn">
+                <a href="" class="conn">Connexion</a>
             </button>
-            <p class="">Pas encore de compte ?<a class="" href="">Inscrivez-vous</a></p>
+            <p class="">Pas encore de compte ? <a class="inscription" href="registration.html">Inscrivez-vous</a></p>
         </form>
     </main>
 </body>

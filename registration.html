@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="description" content="Inscrivez-vous pour pouvoir écouter un large choix de musique.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/form.min.css">
+    <title>Page d'inscription' - Melosphere</title>
+</head>
+
+<body class="bg-connection">
+    <main class="text-center">
+        <h1 class="title-conn">INSCRIPTION</h1>
+        <form method="post">
+            <div class="container-input">
+                <label class="title-input" for="pseudo">Pseudo</label>
+                <br>
+                <input type="pseudo" autocomplete="off" class="input" id="pseudo" name="pseudo"
+                    placeholder="Entrez votre Pseudo..." required />
+                <label class="title-input" for="email">Email</label>
+                <br>
+                <input type="email" autocomplete="off" class="input" id="email" name="email"
+                    placeholder="Entrez votre adresse email..." required />
+                <label class="title-input" for="password">Mot de passe</label>
+                <br>
+                <input type="password" autocomplete="off" class="input" id="password" name="password"
+                    placeholder="Entrez votre mot de passe ..." required />
+                <a href="">
+                    <p class="password-forget">Mot de passe oublié ?</p>
+                </a>
+            </div>
+            <div class="container-checkbox">
+                <label for="rgpd">
+                    <input class="checkbox" type="checkbox" id="rgpd" name="rgpd" unchecked required />
+                    <span class="checkbox-icon"><i class="fas fa-check"></i></span>
+                </label>
+                <label for="scales">J'accepte la collecte de mes informations.</label>
+            </div>
+            <button type="submit" class="btn-conn">
+                <a href="" class="conn">Continuer</a>
+            </button>
+            <p class="">Déjà inscrit ? <a class="inscription" href="connection.html">Connectez-vous</a></p>
+        </form>
+    </main>
+</body>
+
+</html>
