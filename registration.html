@@ -10,38 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/form.min.css">
     <title>Page d'inscription' - Melosphere</title>
+    <script src="assets/js/register.js" defer></script>
 </head>
 
 <body class="bg-connection">
     <main class="text-center">
         <h1 class="title-conn">INSCRIPTION</h1>
-        <form method="post">
+        <form method="post" id="registerForm">
             <div class="container-input">
                 <label class="title-input" for="pseudo">Pseudo</label>
                 <br>
-                <input type="pseudo" autocomplete="off" class="input" id="pseudo" name="pseudo"
+                <input type="text" id="pseudo" autocomplete="off" class="input" name="pseudo"
                     placeholder="Entrez votre Pseudo..." required />
                 <label class="title-input" for="email">Email</label>
                 <br>
-                <input type="email" autocomplete="off" class="input" id="email" name="email"
+                <input type="text" autocomplete="off" class="input" id="email" name="email"
                     placeholder="Entrez votre adresse email..." required />
                 <label class="title-input" for="password">Mot de passe</label>
                 <br>
                 <input type="password" autocomplete="off" class="input" id="password" name="password"
                     placeholder="Entrez votre mot de passe ..." required />
-                <a href="">
+                <a href="#">
                     <p class="password-forget">Mot de passe oublié ?</p>
                 </a>
             </div>
             <div class="container-checkbox">
                 <label for="rgpd">
-                    <input class="checkbox" type="checkbox" id="rgpd" name="rgpd" unchecked required />
+                    <input class="checkbox" type="checkbox" id="rgpd" name="rgpd" required />
                     <span class="checkbox-icon"><i class="fas fa-check"></i></span>
                 </label>
                 <label for="scales">J'accepte la collecte de mes informations.</label>
             </div>
-            <button type="submit" class="btn-conn">
-                <a href="connection.html" class="conn">Continuer</a>
+            <button type="submit"  class="btn-conn conn">
+                Continuer
             </button>
             <p class="">Déjà inscrit ? <a class="inscription" href="connection.html">Connectez-vous</a></p>
         </form>
