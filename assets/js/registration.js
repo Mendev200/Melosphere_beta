@@ -86,40 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Redirection vers la page de connexion
                 window.location.href = "connection.html";
-
-                // Construction du corps de la requête pour la connexion
-                const loginRequestBody = {
-                    email,
-                    password
-                };
-
-                // Requête de connexion vers l'API
-                try {
-                    const loginResponse = await fetch('https://music.freefakeapi.io/api/login', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(loginRequestBody)
-                    });
-
-                    // Analyse du corps de la réponse de la connexion
-                    const loginData = await loginResponse.json();
-
-                    if (loginResponse.ok) {
-                        // Connexion réussie, récupération du token et stockage dans le localStorage
-                        localStorage.setItem('token', loginData.token);
-                        console.log("Token d'accès: " + loginData.token);
-                        console.log('Connexion réussie !');
-                        // Redirection vers la page d'accueil
-                        window.location.href = 'home_page.html';
-                    } else {
-                        // Affichage d'un message d'erreur en cas d'échec de la connexion
-                        console.log('Erreur lors de la connexion : ' + loginData.error);
-                    }
-                } catch (error) {
-                    console.error('Erreur lors de la connexion : ', error);
-                }
             } else {
                 // Affichage d'un message d'erreur en cas d'échec de l'enregistrement
                 console.log('Erreur lors de l\'enregistrement : ' + data.error);

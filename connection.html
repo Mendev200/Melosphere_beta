@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/form.min.css">
     <title>Page de connexion - Melosphere</title>
-    <script src="assets/js/register.js" defer></script>
+    <script src="assets/js/connection.js" defer></script>
 </head>
 
 <body class="bg-connection">
     <main class="text-center">
         <h1 class="title-conn">SE CONNECTER</h1>
-        <form method="post">
+        <form method="post" id="loginForm">
             <div class="container-input">
                 <label class="title-input" for="email">Email</label>
                 <br>
@@ -34,8 +34,8 @@
                     <p class="password-forget">Mot de passe oublié ?</p>
                 </a>
             </div>
-            <button type="submit" class="btn-conn">
-                <a href="home_page.html" class="conn">Connexion</a>
+            <button type="submit" class="btn-conn conn">
+                Connexion
             </button>
             <p class="">Pas encore de compte ? <a class="inscription" href="registration.html">Inscrivez-vous</a></p>
         </form>
