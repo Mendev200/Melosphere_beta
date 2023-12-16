@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="assets/css/splash.css"> -->
+    <title>audioPlayer.html</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/playBtn.svg">
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/bottomMenu.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbarContainer">
+            <ul class="navbar">
+                <li class="toHome-link"><a href="/accueil-jour.html"><img src="assets/icons/downArrow.svg" alt=""
+                            width="30" class="downArrow"></a></li>
+                <li class="dropUpMenu-link">
+                    <a href="#" class="dotLink">
+                        <div class="dotMenu"></div>
+                        <div class="dotMenu"></div>
+                        <div class="dotMenu"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="overlay" class="overlay hideShowOverlay"></div>
+        <div id="licenseOverlay" class="licenseOverlay hideShowOverlay"></div>
+        <section id="bottomSheet" class="bottom-sheet">
+            <div class="content">
+                <div class="topLinesGroup">
+                    <div class="topLines"></div>
+                    <div class="topLines"></div>
+                </div>
+                <section class="bottomSheetLinkGroup">
+                    <a class="menuLinks" href="cdc-favoris-musique.html">
+                        <article class="bottomSheetLink">Coups de coeurs</article>
+                    </a>
+                    <a class="menuLinks" href="audioPlayer.html">
+                        <article class="bottomSheetLink">Artistes</article>
+                    </a>
+                    <a class="menuLinks" href="audioPlayer.html">
+                        <article class="bottomSheetLink">Connexion/Inscription</article>
+                    </a>
+                    <a class="menuLinks" href="accueil-jour.html">
+                        <article class="bottomSheetLink">Acceuil</article>
+                    </a>
+                </section>
+            </div>
+        </section>
+        <!-- LICENSE -->
+        <section id="bottomSheet" class="bottom-sheet licenceBottomSheet">
+            <div class="content">
+                <div class="topLinesGroup">
+                    <div class="topLines"></div>
+                    <div class="topLines"></div>
+                </div>
+                <section class="bottomSheetLinkGroup">
+                    <a class="menuLinks" href="cdc-favoris-musique.html">
+                        <article class="bottomSheetLink">License:</article>
+                    </a>
+                    <a class="menuLinks" href="audioPlayer.html">
+                        <article class="bottomSheetLink">Source:</article>
+                    </a>
+                </section>
+            </div>
+        </section>
+        <section class="audioPlayerSection">
+            <audio id="audioPlayer" controls>AUDIO PLAYER</audio>
+            <section class="mainSection">
+                <section>
+                    <article class="topCoverInfo">
+                        <p class="trackCategory"></p>
+                        <p class="trackLicense">Licence / Source</p>
+                    </article>
+                    <article class="trackCover">
+                        <div class="imageBlock">
+                            <img src="" alt="" class="trackImage">
+                            <div class="loading-img">
+                                <img src="assets/icons/emptyVynil.svg" alt="">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="botCoverInfo">
+                        <p class="trackTitle">...</p>
+                        <p class="trackArtist">...</p>
+                    </article>
+                </section>
+                <!-- PROGRESSBAR CONTROLS AUDIO CONTROLS  -->
+                <article class="progressBar">
+                    <div class="customProgressBar">
+                        <div class="progressBkg">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <input type="range" id="track" min="0" value="0" class="progressBar">
+                    <p class="trackDuration">00:00</p>
+                </article>
+                <article class="favoriteHeart">
+                    <img src="assets/icons/favHeart.svg" alt="" width="45" class="heartFav">
+                </article>
+                <article class="controlButtons">
+                    <img src="assets/icons/randomIcon.svg" alt="" class="controlBtn randomBtn">
+                    <div class="playPauseBtnGroup">
+                        <img src="assets/icons/emptyVynil.svg" alt="" class="playBtns">
+                        <img src="assets/icons/pauseBtn.svg" alt="" class="pause-button pauseBtn playPauseBtn">
+                        <img src="assets/icons/playBtn.svg" alt="" class="play-button pauseBtn playPauseBtn">
+                    </div>
+                    <img src="assets/icons/stopIcon.svg" alt="" class="controlBtn stopBtn">
+                </article>
+            </section>
+        </section>
+        <!-- MENU ( DISPLAY = NONE )-->
+        <article class="menuGroup" style="display: none;">
+
+            <div class="menuIconsGroup">
+                <!-- HOME (HOUSE ICON) -->
+                <svg class="menuIcon homeIcon" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13.485" cy="13.485" r="13.485" fill="#292D32" />
+                    <path
+                        d="M5.86033 11.0432L12.7094 4.0431C12.792 3.95984 12.8902 3.89375 12.9985 3.84865C13.1067 3.80355 13.2228 3.78033 13.3401 3.78033C13.4574 3.78033 13.5735 3.80355 13.6817 3.84865C13.79 3.89375 13.8882 3.95984 13.9708 4.0431L20.8199 11.0521C20.9856 11.2191 21.1165 11.4174 21.2049 11.6355C21.2934 11.8536 21.3376 12.0871 21.3351 12.3224V19.7666C21.3358 20.2214 21.1621 20.6591 20.8497 20.9896C20.5374 21.3201 20.1102 21.5183 19.6562 21.5433H7.02405C6.56999 21.5183 6.1428 21.3201 5.83046 20.9896C5.51812 20.6591 5.34441 20.2214 5.3451 19.7666V12.3224C5.34439 11.8453 5.52914 11.3866 5.86033 11.0432ZM15.1168 19.7666V14.4366H11.5634V19.7666H15.1168ZM7.12177 19.7666H9.78677V13.5483C9.78677 13.3127 9.88036 13.0867 10.047 12.9201C10.2135 12.7535 10.4395 12.6599 10.6751 12.6599H16.0051C16.2407 12.6599 16.4667 12.7535 16.6332 12.9201C16.7998 13.0867 16.8934 13.3127 16.8934 13.5483V19.7666H19.5584V12.2868L13.3401 5.93525L7.12177 12.3224V19.7666Z"
+                        fill="#F9B233" />
+                </svg>
+                <!-- SEARCH (SEARCH ICON) -->
+                <svg class="menuIcon searchIcon" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
+                    width="27px" height="27px" viewBox="0 0 26.97 26.97">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #f9b233;
+                            }
+
+                            .cls-2 {
+                                fill: #292d32;
+                            }
+                        </style>
+                    </defs>
+                    <circle class="cls-2" cx="13.48" cy="13.48" r="13.48" />
+                    <g>
+                        <path class="cls-1"
+                            d="m19.51,8.78h-4.52c-.31,0-.56-.26-.56-.56s.26-.56.56-.56h4.52c.31,0,.56.26.56.56s-.26.56-.56.56Z" />
+                        <path class="cls-1"
+                            d="m17.25,11.04h-2.26c-.31,0-.56-.26-.56-.56s.26-.56.56-.56h2.26c.31,0,.56.26.56.56s-.26.56-.56.56Z" />
+                        <path class="cls-1"
+                            d="m13.11,20.82c-4.25,0-7.71-3.46-7.71-7.71s3.46-7.71,7.71-7.71c.31,0,.56.26.56.56s-.26.56-.56.56c-3.64,0-6.59,2.96-6.59,6.59s2.95,6.59,6.59,6.59,6.59-2.96,6.59-6.59c0-.31.26-.56.56-.56s.56.26.56.56c0,4.25-3.46,7.71-7.71,7.71Z" />
+                        <path class="cls-1"
+                            d="m21.01,21.58c-.14,0-.29-.05-.4-.17l-1.51-1.51c-.22-.22-.22-.58,0-.8.22-.22.58-.22.8,0l1.51,1.51c.22.22.22.58,0,.8-.11.11-.26.17-.4.17Z" />
+                    </g>
+                </svg>
+                <!-- FAVORIS (HEART ICON) -->
+                <svg class="menuIcon heartIcon" width="27" height="28" viewBox="0 0 27 28" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12.5" cy="13.5" r="10.5" fill="#F9B233" />
+                    <path
+                        d="M13.4875 0C6.0424 0 0 6.08758 0 13.5884C0 21.0891 6.0424 27.1767 13.4875 27.1767C20.9326 27.1767 26.975 21.0891 26.975 13.5884C26.975 6.08758 20.9326 0 13.4875 0ZM13.9326 20.3825C13.6898 20.4641 13.2717 20.4641 13.0289 20.3825C10.9249 19.6623 6.20425 16.6321 6.20425 11.4957C6.20425 9.22649 8.01157 7.39206 10.2505 7.39206C11.5723 7.39206 12.7457 8.03071 13.4875 9.03625C14.2158 8.0443 15.4027 7.39206 16.7245 7.39206C18.9634 7.39206 20.7707 9.22649 20.7707 11.4957C20.7707 16.6321 16.0501 19.6623 13.9326 20.3825Z"
+                        fill="#292D32" />
+                </svg>
+            </div>
+            <div class="menuBkgGroup">
+                <!-- Menu bkg 1 -->
+                <svg class="menuBkg leftPanel" width="320" height="70" viewBox="0 0 320 70" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M38.3397 12.9915C33.0001 7.01924 26.7213 0 18.7101 0H-96C-101.523 0 -106 4.47715 -106 10V60C-106 65.5229 -101.523 70 -96 70H416C421.523 70 426 65.5229 426 60V10C426 4.47715 421.523 0 416 0H89.2899C81.2787 0 74.9999 7.01924 69.6603 12.9915C65.8148 17.2927 60.2236 20 54 20C47.7764 20 42.1851 17.2927 38.3397 12.9915Z"
+                        fill="#DCDCDC" />
+                </svg>
+                <!-- Menu bkg 2 -->
+                <svg class="menuBkg middlePanel" width="320" height="70" viewBox="0 0 320 70" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M144.34 12.9915C139 7.01924 132.721 0 124.71 0H-96C-101.523 0 -106 4.47715 -106 10V60C-106 65.5229 -101.523 70 -96 70H416C421.523 70 426 65.5229 426 60V10C426 4.47715 421.523 0 416 0H195.29C187.279 0 181 7.01925 175.66 12.9915C171.815 17.2927 166.224 20 160 20C153.776 20 148.185 17.2927 144.34 12.9915Z"
+                        fill="#DCDCDC" />
+                </svg>
+                <!-- Menu bkg 3 -->
+                <svg class="menuBkg rightPanel" width="320" height="70" viewBox="0 0 320 70" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M251.34 12.9915C246 7.01926 239.721 0 231.71 0H-96C-101.523 0 -106 4.47715 -106 10V60C-106 65.5229 -101.523 70 -96 70H416C421.523 70 426 65.5229 426 60V10C426 4.47715 421.523 0 416 0H302.29C294.279 0 288 7.01926 282.66 12.9915C278.815 17.2927 273.224 20 267 20C260.776 20 255.185 17.2927 251.34 12.9915Z"
+                        fill="#DCDCDC" />
+                </svg>
+            </div>
+        </article>
+    </main>
+    <section class="splash_screen mainLoader">
+        <article class="splash_group">
+            <img src="assets/images/chargement_fond.svg" alt="" class="background_img">
+            <img src="assets/images/vagues.svg" alt="" class="waves">
+            <img src="assets/images/Chargement_avec_logo.svg" alt="" class="background_img">
+        </article>
+    </section>
+</body>
+
+</html>

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Token d'accès: " + loginData.token);
                 console.log('Connexion réussie !');
                 // Redirection vers la page d'accueil
-                window.location.href = 'home_page.html';
+                window.location.href = 'homePage.html';
             } else {
                 // Affichage d'un message d'erreur en cas d'échec de la connexion
                 console.log('Erreur lors de la connexion : ' + loginData.error);
