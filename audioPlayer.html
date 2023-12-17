@@ -9,23 +9,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/icons/playBtn.svg">
     <link rel="stylesheet" href="assets/css/audioPlayer.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/splash.css"> -->
     <title>audioPlayer.html</title>
+    <script src="assets/js/audioPlayer.js" defer></script>
     <script src="assets/js/bottomMenu.js" defer></script>
 
 </head>
 
-<body>
+<body class="bg-audioPlayer">
     <header>
         <nav class="navbarContainer">
             <ul class="navbar">
-                <li class="toHome-link"><a href="/accueil-jour.html"><img src="assets/icons/downArrow.svg" alt=""
-                            width="30" class="downArrow"></a></li>
+                <li class="toHome-link"><a href="/homePage.html"><img src="assets/img/objet/ananas.svg" alt=""
+                            width="50" class="downArrow"></a></li>
                 <li class="dropUpMenu-link">
                     <a href="#" class="dotLink">
-                        <div class="dotMenu"></div>
-                        <div class="dotMenu"></div>
-                        <div class="dotMenu"></div>
+                        <img src="assets/icons/downArrow.svg" alt="" width="20"
+                            class="downArrow">
                     </a>
                 </li>
             </ul>
@@ -36,41 +35,30 @@
         <div id="licenseOverlay" class="licenseOverlay hideShowOverlay"></div>
         <section id="bottomSheet" class="bottom-sheet">
             <div class="content">
-                <div class="topLinesGroup">
-                    <div class="topLines"></div>
-                    <div class="topLines"></div>
-                </div>
                 <section class="bottomSheetLinkGroup">
+                    <a class="menuLinks" href="homePage.html">
+                        <article class="bottomSheetLink">Acceuil</article>
+                    </a>
                     <a class="menuLinks" href="cdc-favoris-musique.html">
                         <article class="bottomSheetLink">Coups de coeurs</article>
                     </a>
                     <a class="menuLinks" href="audioPlayer.html">
                         <article class="bottomSheetLink">Artistes</article>
                     </a>
-                    <a class="menuLinks" href="audioPlayer.html">
+                    <!-- <a class="menuLinks" href="audioPlayer.html">
                         <article class="bottomSheetLink">Connexion/Inscription</article>
+                    </a> -->
+                    <a class="menuLinks" href="cdc-favoris-musique.html">
+                        <article class="bottomSheetLink">License</article>
                     </a>
-                    <a class="menuLinks" href="accueil-jour.html">
-                        <article class="bottomSheetLink">Acceuil</article>
+                    <a class="menuLinks" href="audioPlayer.html">
+                        <article class="bottomSheetLink">Source</article>
                     </a>
                 </section>
-            </div>
-        </section>
-        <!-- LICENSE -->
-        <section id="bottomSheet" class="bottom-sheet licenceBottomSheet">
-            <div class="content">
                 <div class="topLinesGroup">
                     <div class="topLines"></div>
                     <div class="topLines"></div>
                 </div>
-                <section class="bottomSheetLinkGroup">
-                    <a class="menuLinks" href="cdc-favoris-musique.html">
-                        <article class="bottomSheetLink">License:</article>
-                    </a>
-                    <a class="menuLinks" href="audioPlayer.html">
-                        <article class="bottomSheetLink">Source:</article>
-                    </a>
-                </section>
             </div>
         </section>
         <section class="audioPlayerSection">
@@ -190,13 +178,6 @@
             </div>
         </article>
     </main>
-    <!-- <section class="splash_screen mainLoader">
-        <article class="splash_group">
-            <img src="assets/images/chargement_fond.svg" alt="" class="background_img">
-            <img src="assets/images/vagues.svg" alt="" class="waves">
-            <img src="assets/images/Chargement_avec_logo.svg" alt="" class="background_img">
-        </article>
-    </section> -->
 </body>
 
 </html>
