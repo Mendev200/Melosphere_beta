@@ -4,7 +4,12 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+  .bg-audioPlayer {
+    background-image: url(/assets/img/bg/bg-audioplayer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
   .mainSection {
     width: 80%;
     margin-left: 10%;
@@ -52,6 +57,7 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    margin-top: 7px;
   }
   
   .navbar li a {
@@ -68,7 +74,7 @@
   }
   
   .downArrow {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
   
   .dotLink {
@@ -225,17 +231,16 @@
   .bottom-sheet {
     z-index: 998;
     position: fixed;
-    bottom: -100%;
+    top: -100%; /* Utilisez top au lieu de bottom */
     left: 10px;
     right: 10px;
-    height: 250px;
     background-color: #ffffff;
     border-radius: 16px;
-    transition: bottom 0.3s ease;
+    transition: top 0.3s ease; /* Utilisez top au lieu de bottom */
   }
   
   .bottom-sheet.open {
-    bottom: 0;
+    top: 0; /* Utilisez top au lieu de bottom */
   }
   
   .overlay {
@@ -273,6 +278,7 @@
   }
   
   .topLinesGroup {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +304,8 @@
   }
   
   .bottomSheetLink {
-    margin-top: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     height: 40px;
     border-radius: 10px;
     background-color: #999999;

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Récupérer le token depuis le localStorage
     const token = localStorage.getItem("token");
-
     // Fonction pour effectuer la requête et afficher les morceaux
     function fetchAndDisplayTracks() {
         fetch("https://music.freefakeapi.io/api/tracks?order=latest&limit=10", {
@@ -36,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Une erreur s'est produite lors de la récupération des morceaux :", error);
             });
     }
-
     // Fonction pour récupérer les 8 derniers morceaux écoutés
     function fetchRecentlyPlayed() {
         fetch("https://music.freefakeapi.io/api/tracks?order=played", {
@@ -72,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Une erreur s'est produite lors de la récupération des morceaux écoutés :", error);
             });
     }
-
     // Appeler la fonction pour récupérer les morceaux et les afficher
     fetchAndDisplayTracks();
     // Appeler la fonction pour récupérer les 8 derniers morceaux écoutés
