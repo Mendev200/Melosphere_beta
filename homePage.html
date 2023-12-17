@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/icons/playBtn.svg">
-    <link rel="stylesheet" href="assets/css/home_page.min.css">
+    <link rel="stylesheet" href="assets/css/homePage.min.css">
     <title>Page d'accueil- Melosphere</title>
+    <script src="assets/js/trackHome.js" defer></script>
 </head>
 
 <body class="bg-homepage">
@@ -21,29 +22,20 @@
     <main>
         <section class="container-recently">
             <h1 class="recently">Récemment ajoutées</h1>
-            <div class="container-homepage-cover">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
+            <div class="scroll-accueil">
+                <div class="container" id="tracks-container"></div>
             </div>
         </section>
         <section class="container-recently">
             <h1 class="recently">Récemment écoutées</h1>
-            <div class="container-homepage-cover">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
-                <img class="homepage-cover" src="cover_492.svg" alt="">
+            <div class="scroll-accueil">
+                <div class="container" id="recently-played-container"></div>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer-icon">
             <a href=""><img class="homepage-icon" src="/assets/img/objet/icon_home.svg" alt=""></a>
-
             <a href=""><img class="homepage-icon" src="/assets/img/objet/icon_fav.svg" alt=""></a>
         </div>
     </footer>

@@ -29,7 +29,12 @@
   margin: 10px;
 }
 
-.container-homepage-cover {
+.titre-accueil {
+  margin-left: 15px;
+}
+
+#tracks-container,
+#recently-played-container {
   display: flex;
   overflow: auto;
   scroll-snap-type: x mandatory;
@@ -38,8 +43,8 @@
   scroll-padding-left: 90px;
   scroll-padding-right: 90px;
 }
-
-.homepage-cover {
+#tracks-container .cover-accueil,
+#recently-played-container .cover-accueil {
   height: 20vh;
   width: auto;
   border-radius: 14px;
@@ -66,4 +71,4 @@
 
 .homepage-icon {
   width: 35px;
-}/*# sourceMappingURL=home_page.css.map */
+}/*# sourceMappingURL=homePage.css.map */
