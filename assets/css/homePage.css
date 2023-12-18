@@ -16,7 +16,12 @@
 .container-personcircle {
   display: flex;
   justify-content: end;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.personcircle {
+  width: 90px;
+  margin: 10px;
 }
 
 .container-recently {
@@ -25,7 +30,6 @@
 }
 
 .recently {
-  font-size: 16px;
   margin: 10px;
 }
 
@@ -45,10 +49,10 @@
 }
 #tracks-container .cover-accueil,
 #recently-played-container .cover-accueil {
-  height: 20vh;
+  height: 25vh;
   width: auto;
   border-radius: 14px;
-  margin-left: 12px;
+  margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 17px;
   scroll-snap-align: center;

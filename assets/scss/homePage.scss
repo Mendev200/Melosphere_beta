@@ -16,9 +16,15 @@
 .container-personcircle {
     display: flex;
     justify-content: end;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
+.personcircle {
+    width: 90px;
+    margin: 10px;
+    // background-color: orange;
+    // border-radius: 50%;
+}
 .container-recently {
     margin-left: 10px;
     margin-bottom: 20px;
@@ -26,7 +32,7 @@
 }
 
 .recently {
-    font-size: 16px;
+    // font-size: 16px;
     margin: 10px;
 }
 
@@ -45,10 +51,10 @@
     scroll-padding-right: 90px;
 
     .cover-accueil {
-        height: 20vh;
+        height: 25vh;
         width: auto;
         border-radius: 14px;
-        margin-left: 12px;
+        margin-left: 15px;
         margin-top: 5px;
         margin-bottom: 17px;
         scroll-snap-align: center;
